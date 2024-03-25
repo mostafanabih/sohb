@@ -26,7 +26,9 @@
                 @foreach($projects as $project)
                 <div class="col-md-4">
                     <div class="portfolio-img aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500"> <a data-fancybox="gallery" href="images/thumbnail/projects/202102161375162054.jpg">
-                            <img src="{{$project->images[0]}}" alt=""><i class="flaticon-add rp-icon"></i></a>
+                    @foreach($project->images as $image)
+                            <img  src="@if($loop->first) {{asset("storage/$image")}} @endif"  alt=""><i class="flaticon-add rp-icon"></i></a>
+                            @endforeach
                         <div class="sp-text">
                             <h3>{{$project->name}}</h3>
                             <p><p>{{$project->description}}</p>
