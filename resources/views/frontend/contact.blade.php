@@ -29,16 +29,17 @@
     
     
     
-</div>                            <form action="https://www.swaralaqar.com/messages" method="post">
-                                <input type="hidden" name="_token" value="LW90ehl6ZALdNAhMJgCDtSjjCr6i7rKBE2wQILV3">                                <div class="form-group mcfg">
-                                    <input type="text" class="form-control m-input" name="name" id="name" placeholder="اسمك *">
+</div>                          
+                              <form action="{{route('contact_us')}}" method="post">
+                                  @csrf
+                                    <input type="text" class="form-control m-input" name="name" id="name" placeholder="اسمك *" required>
                                 </div>
                                 <div class="form-group mcfg">
-                                    <input type="text" class="form-control m-input" name="email" id="email" placeholder="بريدك الالكتروني *">
+                                    <input type="text" class="form-control m-input" name="email" id="email" placeholder="بريدك الالكتروني *" required>
                                 </div>
 
                                 <div class="form-group mcfg">
-                                    <textarea rows="4" class="form-control m-input" name="message" id="msg" placeholder="رسالة *"></textarea>
+                                    <textarea rows="4" class="form-control m-input" name="message" id="msg" placeholder="رسالة *" required></textarea>
                                 </div>
                                 <button type="submit" id="submit" class="m-submit">أرسل رسالة</button>
                                 <div class="col-md-12 text-center">

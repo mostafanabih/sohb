@@ -24,8 +24,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Route::get('/services', [HomeController::class, 'services'])->name('services');
     Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
     Route::get('/project/{id}', [HomeController::class, 'showProject'])->name('show_project');
-    Route::get('/images', [HomeController::class, 'images'])->name('images');
+    Route::get('/galleries', [HomeController::class, 'galleries'])->name('galleries');
     Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
+    Route::post('/contact-us', [HomeController::class, 'contact_us'])->name('contact_us');
 
 
 

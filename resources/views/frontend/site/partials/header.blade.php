@@ -18,7 +18,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link active" href="{{route('index')}}">الرئيسية</a></li>
                 <li class="nav-item"><a class="nav-link " href="{{route('about')}}">   من نحن </a></li>
-                <li class="nav-item"><a class="nav-link " href="{{route('images')}}">    البوم صور </a></li>
+                <li class="nav-item"><a class="nav-link " href="{{route('galleries')}}">    البوم صور </a></li>
 
                 <!-- <li class="nav-item dropdown show">
                     <a class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true"> البوابات لدينا </a>

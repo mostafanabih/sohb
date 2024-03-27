@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Category;
 use App\Models\Client;
+use App\Models\Contact;
+use App\Models\Image;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\SubCategory;
@@ -41,4 +43,24 @@ public function showProject($id)
     $info = Project::find($id);
     return view('frontend.show_project',compact('info'));
 }
+
+public function contacts()
+{
+    return view('frontend.contact');
+}
+
+public function contact_us(Request $request)
+{
+    $data=$request->all();
+    Contact::create($data);
+    return redirect()->back();
+}
+
+public function galleries()
+{
+    $images = Image::all();
+    return view('frontend.gallary',compact('images'));
+}
+
+
 }

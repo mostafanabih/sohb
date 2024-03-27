@@ -1,5 +1,5 @@
 :root {
-  --MainColor:#b38044;
+  --MainColor:#5C5C5C;
 }
 * {
   margin: 0;
@@ -3108,5 +3108,34 @@ project-gallery .portfolio-img .sp-text {text-align: right;left: 0;width: 100%;}
   padding: 0;
   margin: 0;
 }
+
+
+.mextreo-hero.inner .hero-content ul {
+  margin-bottom: 20px;
+}
+
+.mextreo-hero.inner .hero-content ul li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mextreo-hero.inner .hero-content ul li i {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
 
 

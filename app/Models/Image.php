@@ -13,6 +13,9 @@ class Image extends Model
     ];
     public $timestamps = true;
     
-
+    public function getImageAttribute(){
+        return url('storage').'/'.$this->attributes['image'];
+    }
+   
 
 }
