@@ -37,6 +37,8 @@ class ServiceResource extends Resource
                     ->required(),
                 Forms\Components\FileUpload::make('icone')
                     ->image()->disk('public')->directory('services'),
+                    Forms\Components\FileUpload::make('image')
+                    ->image()->disk('public')->directory('services_image'),
             ]);
     }
 

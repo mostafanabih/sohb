@@ -8,7 +8,7 @@
                     <div class="cont text-center">
                         <h1> خدماتنا</h1>
                         <div class="path">
-                            <a href="index.html">الرئيسية</a><span>/</span><a href="#0" class="active">  خدماتنا </a>
+                            <a href="{{route('index')}}">الرئيسية</a><span>/</span><a href="#0" class="active">  خدماتنا </a>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,8 @@
                 @foreach($services as $service)
                 <div class="col-lg-4" data-aos="fade-up" data-aos-duration="2500" class="aos-init aos-animate">
                     <div class="step-item ">
-                        <span class="icon flaticon-maid"></span>
+                        <!-- <span class="icon flaticon-maid"></span> -->
+                        <img src="{{$service->icone}}" style="width:70px;height:70px;">
                         <h6>  {{$service->name}}
                         </h6>
                         <p> <p><span style="color: #000000;">{{$service->description}}</span></p>

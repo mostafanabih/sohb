@@ -1,7 +1,7 @@
 @extends('frontend.site.app')
 
 @section('content')
-    <header class="pages-header bg-img valign parallaxie" data-background="https://www.swaralaqar.com/images//projects/202102213473122718.jpg" data-overlay-dark="5">
+    <header class="pages-header bg-img valign parallaxie" data-background="{{asset('assets/projects/projects.jpg')}}" data-overlay-dark="5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -25,9 +25,9 @@
             <div class="row mt-30">
                 @foreach($projects as $project)
                 <div class="col-md-4">
-                    <div class="portfolio-img aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500"> <a data-fancybox="gallery" href="images/thumbnail/projects/202102161375162054.jpg">
+                    <div class="portfolio-img aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" style="    width: 350px;height: 348px;"> <a data-fancybox="gallery" href="images/thumbnail/projects/202102161375162054.jpg">
                     @foreach($project->images as $image)
-                            <img  src="@if($loop->first) {{asset("storage/$image")}} @endif"  alt=""><i class="flaticon-add rp-icon"></i></a>
+                            <img  src="@if($loop->first) {{asset("storage/$image")}} @endif"  alt="" style="height:350px;width:329px;"><i class="flaticon-add rp-icon"></i></a>
                             @endforeach
                         <div class="sp-text">
                             <h3>{{$project->name}}</h3>

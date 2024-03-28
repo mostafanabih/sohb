@@ -30,20 +30,21 @@
                 <div class="row links_footer">
                     <div class="col-md-6">
                         <h3 class="custom-font stit fz-20 simple-btn">خدماتنا</h3>
+                        
                         <ul>
-                                                        <li><a href="services/%D8%A8%D9%8A%D8%B9-%D9%88%D8%B4%D8%B1%D8%A7%D8%A1-%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D8%A7%D8%AA.html">بيع وشراء العقارات</a> </li>
-                                                        <li><a href="services/%D8%A7%D9%84%D9%86%D8%B4%D8%A7%D8%A1-%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%8A%D8%B1.html">الإنشاء والتعمير</a> </li>
-                                                        <li><a href="services/%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%84%D8%A7%D9%83.html">إدارة الأملاك</a> </li>
-                                                    </ul>
+                            @foreach($services as $service)
+                                <li><a href="{{route('show_service',$service->id)}}">{{$service->name}}</a> </li>
+                            @endforeach                            
+                        </ul>
                     </div>
                     <div class="col-md-6">
                         <h3 class="custom-font stit fz-20 simple-btn">روابط سريعة</h3>
                         <ul>
-                            <li><a href="index.html">الرئيسية</a></li>
-                            <li><a href="about.html">من نحن</a></li>
-                            <li><a href="services.html">خدماتنا</a></li>
-                            <li><a href="projects.html">مشاريعنا</a></li>
-                            <li><a href="contact.html">تواصل معنا</a></li>
+                            <li><a href="{{route('index')}}">الرئيسية</a></li>
+                            <li><a href="{{route('about')}}">من نحن</a></li>
+                            <li><a href="{{route('services')}}">خدماتنا</a></li>
+                            <li><a href="{{route('projects')}}">مشاريعنا</a></li>
+                            <li><a href="{{route('contacts')}}">تواصل معنا</a></li>
                         </ul>
                     </div>
                 </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Client;
 use App\Models\Contact;
@@ -17,8 +18,9 @@ class HomeController extends Controller
 public function index()
 {
     $clients = Client::all();
+    $banners = Banner::all();
     $about = About::first();
-    return view('frontend.index',compact('clients','about'));
+    return view('frontend.index',compact('clients','about','banners'));
 }
 
 public function about()
@@ -31,6 +33,12 @@ public function services()
     $services = Service::all();
     return view('frontend.services',compact('services'));
 }
+public function showService($id)
+{
+    $info = Service::find($id);
+    return view('frontend.show_service',compact('info'));
+}
+
 
 public function projects()
 {

@@ -11,12 +11,20 @@ class Service extends Model
 
     protected $table = 'services';
     protected $fillable = [
-        'name','description','icone'
+        'name','description','icone','image'
     ];
     public $timestamps = true;
     public array $translatable = [
         'name','description'
     ];
+
+    public function getIconeAttribute(){
+        return url('storage').'/'.$this->attributes['icone'];
+    }
+    public function getImageAttribute(){
+        return url('storage').'/'.$this->attributes['image'];
+    }
+   
     
 
 }

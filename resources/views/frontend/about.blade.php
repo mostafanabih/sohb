@@ -2,7 +2,7 @@
 
 @section('content')
     <header class="pages-header bg-img valign parallaxie"
-        data-background="https://www.swaralaqar.com/images//about/2021022181709597186.jpg" data-overlay-dark="5">
+        data-background="{{asset('assets/img/about.jpeg')}}" data-overlay-dark="5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -66,9 +66,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="hero-inner-img">
-                        <img src="images/about/2021021765631816262.jpg" alt="" data-aos="fade-left"
+                        <img src="{{asset('assets/about/2021021765631816262.jpg')}}" alt="" data-aos="fade-left"
                             data-aos-duration="2000" class="aos-init aos-animate lazy">
-                        <img src="images/about/2021021764952587099.jpg" alt="" class="hero-inner-2 aos-init lazy"
+                        <img src="{{asset('assets/about/2021021764952587099.jpg')}}" alt="" class="hero-inner-2 aos-init lazy"
                             data-aos="fade-up" data-aos-duration="3000">
                     </div>
                 </div>

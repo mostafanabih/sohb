@@ -16,12 +16,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 */
 Route::get('/language/{locale}', 'LanguageController@changeLanguage')->name('language.change');
 
-Route::group(['prefix' => LaravelLocalization::setLocale()], function()
-{
+// Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+// {
 	/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
     Route::get('/', [HomeController::class, 'index'])->name('index');
     Route::get('/about', [HomeController::class, 'about'])->name('about');
     Route::get('/services', [HomeController::class, 'services'])->name('services');
+    Route::get('/service/{id}', [HomeController::class, 'showService'])->name('show_service');
     Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
     Route::get('/project/{id}', [HomeController::class, 'showProject'])->name('show_project');
     Route::get('/galleries', [HomeController::class, 'galleries'])->name('galleries');
@@ -32,4 +33,4 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 
 
 	
-});
+// });

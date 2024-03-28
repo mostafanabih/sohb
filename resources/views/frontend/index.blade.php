@@ -4,14 +4,15 @@
     <header class="slider slider-prlx fixed-slider text-center">
         <div class="swiper-container parallax-slider">
             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                    <div class="bg-img valign " data-background="https://www.swaralaqar.com/images//slider/2021021724238694479.png" data-overlay-dark="6">
+                @foreach($banners as $banner)
+                <div class="swiper-slide">
+                    <div class="bg-img valign " data-background="{{$banner->image}}" data-overlay-dark="6">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 col-md-9">
                                     <div class="caption center">
-                                        <h1>امتلك منزل المستقبل</h1>
-                                        <p><p>انعم بلحظات جيدة مع عائلتك .. فى أكثر المنازل أبداعاً</p>
+                                        <h1>{{$banner->name}}</h1>
+                                        <p><p>{{$banner->description}}</p>
                                         <a href="about.html" class="btn-curve btn-lit mt-30">
                                             <span>اقرأ المزيد</span>
                                         </a>
@@ -21,24 +22,9 @@
                         </div>
                     </div>
                 </div>
-                                <div class="swiper-slide">
-                    <div class="bg-img valign " data-background="https://www.swaralaqar.com/images//slider/20210217125809456687.png" data-overlay-dark="6">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 col-md-9">
-                                    <div class="caption center">
-                                        <h1>خدماتنا العقارية</h1>
-                                        <p><p>شركة سحب  أكبر مطور عقارى بالمملكة .. نحن جزء من مشروعك العقارى</p>
-                                        <a href="services.html" class="btn-curve btn-lit mt-30">
-                                            <span>اقرأ المزيد</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                            </div>
+                @endforeach
+                
+            </div>
             <div class="setone setwo">
                 <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer">
                     <i class="fas fa-chevron-right"></i>
@@ -51,37 +37,7 @@
         </div>
     </header>
     <div class="main-content">
-        <div class="clients_section bg-shape-image-position">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <br>
-                        <br>
-                        <div class="section-title">
-                            <h5>أهم و أبرز العملاء لدينا...</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="client-logo">
-                            <div class="slic-item">
-                                @foreach($clients as $client)
-                                <div class="item">
-                                    <div class="client_box">
-                                        <img class="lazy" src="{{$client->logo}}" alt="brand">
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-shape-image">
-                
-            </div>
-        </div>
+        
         <div class="about section-padding">
             <div class="container">
                 <div class="row">
@@ -113,31 +69,31 @@
                             <p class="wow txt"><p><span style="color: #000000;"></span>
                             
                             نفتخر في مكتب سحب العقاري بتقديم خدمات متميزة تُكللها رؤى واستراتيجيات يدفعها الشغف لتُلبية تفضيلات وأحلام عملائنا بما يلائم احتياجاتهم بأعلى معايير الجودة والمهنية، تأسست سحب العقارية في عام 1432 هـ وأطلقت العديد من المشاريع السكنية التي تجمع بين الأصالة والفخامة والرقي. بفضل الرؤى والاستراتيجيات القائمة على الابتكار والشغف، نجحنا في بناء سمعة رائدة في مجال إدارة وتسويق العقارات، مع التميز في مواجهة التحديات وتحقيق النجاحات المتعددة. 
-يتميز فريقنا الهندسي بالاحترافية والخبرة العميقة، ونسعى دائمًا لتكون الخيار الأول لعملائنا، حيث نتطلع إلى تحقيق مزيد من النجاحات وتعزيز الثقة والتواصل المستمر معهم.
+                         يتميز فريقنا الهندسي بالاحترافية والخبرة العميقة، ونسعى دائمًا لتكون الخيار الأول لعملائنا، حيث نتطلع إلى تحقيق مزيد من النجاحات وتعزيز الثقة والتواصل المستمر معهم.
 
                             </p>
                         <p>&nbsp;</p>
                             <div class="ftbox mt-30">
                                 <ul>
                                     
-                                    <li class="  wow fadeIn" data-wow-delay=".3s">
+                                    <li class="  wow fadeIn" data-wow-delay=".3s" style="border-radius:50%">
                                         <a target="_blank" href="">
                                             <span class="icon flaticon-construction"></span>
-                                            <h6 class="custom-font">الإنشاء والتعمير</h6>
+                                            <h6 class="custom-font"> بناء العقارات</h6>
                                         </a>
                                     </li>
                                     
-                                    <li class=" space wow fadeIn" data-wow-delay=".3s">
+                                    <li class=" space wow fadeIn" data-wow-delay=".3s" style="border-radius:50%">
                                         <a target="_blank" href="">
                                             <span class="icon flaticon-building-2"></span>
-                                            <h6 class="custom-font">الخدمات العقاريه</h6>
+                                            <h6 class="custom-font">بيع العقارات</h6>
                                         </a>
                                     </li>
                                     
-                                    <li class="  wow fadeIn" data-wow-delay=".3s">
+                                    <li class="  wow fadeIn" data-wow-delay=".3s" style="border-radius:50%">
                                         <a target="_blank" href="">
                                             <span class="icon flaticon-cleaner-1"></span>
-                                            <h6 class="custom-font">أعمال خدمات الصيانة</h6>
+                                            <h6 class="custom-font">تأجير العقارات</h6>
                                         </a>
                                     </li>
                                                                     </ul>
@@ -145,6 +101,38 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="clients_section bg-shape-image-position">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <br>
+                        <br>
+                        <div class="section-title">
+                            <h5> شركاء النجاح...</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="client-logo">
+                            <div class="slic-item">
+                                @foreach($clients as $client)
+                                <div class="item">
+                                    <div class="client_box">
+                                        <img class="lazy" src="{{$client->logo}}" alt="brand">
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-shape-image">
+                
             </div>
         </div>
        

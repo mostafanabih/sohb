@@ -20,6 +20,12 @@ class Banner extends Model
     ];
 
 
+    public function getImageAttribute(){
+        return url('storage').'/'.$this->attributes['image'];
+    }
+   
+
+
 
 
 }
